@@ -5,8 +5,8 @@
     --space-sm: 0.75rem;
     --space-md: 1rem;
     --space-lg: 1.5rem;
-    --space-xl: 2rem;
     --space-xl: 3rem;
+    --space-xxl: 4rem;
 
     /* Line Height */
 
@@ -21,6 +21,7 @@
     --color-soft: rgb(238, 238, 238);
     --color-dark: rgb(56, 56, 56);
     --color-mid-dark: rgb(132, 132, 132);
+    --color-black: rgb(26, 26, 26);
 
     --color-primary: var(--color-main);
     --color-primary-hover: var(--color-secondary);

@@ -2,11 +2,19 @@
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: var(--space-md);
     background-color: var(--color-light);
     padding: var(--space-md) var(--space-xl);
     width: 100%;
+}
+
+@media (width >= 768px) {
+    header {
+        flex-direction: row;
+    }
 }
 
 
@@ -34,7 +42,7 @@ header {
     margin-bottom: var(--space-xl);
 }
 
-@media (width >= 800px) {
+@media (width >= 768px) {
     .grid-content {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -52,12 +60,7 @@ header {
     margin-bottom: var(--space-xxl);
 
 
-    @media (width >= 550px) {
-    flex-flow: wrap;
-    }
-
-
-    @media (width >= 800px) {
+        @media (width >= 768px) {
          flex-flow: wrap;
     }
 }
@@ -136,20 +139,20 @@ header {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: var(--color-mid-dark);
+        background-color: var(--color-dark);
         color: var(--color-light);
     }
 
     .card,
     .card-foto,
     .formulario {
-        background-color: var(--color-dark);
+        background-color: var(--color-mid-dark);
         color: var(--color-light);
     }
 
     header,
     .footer {
-        background-color: var(--color-dark);
+        background-color: var(--color-black);
         color: var(--color-light);
     }
 
