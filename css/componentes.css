@@ -1,0 +1,118 @@
+
+
+ /* SVG */
+ion-icon{
+    font-size: var(--font-size-m);
+}
+
+ /* BOTONES */
+
+.btn{
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 6px;
+    border: none;
+}
+
+
+.btn--primary{
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    transform: translateY(0px); 
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+
+    &:hover{
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px); 
+    transition: transform var(--transition-base), background-color var(--transition-base);
+
+}
+}
+
+/* HEADER MENU NAVEGACIÓN */
+
+.navegacion{
+cursor: pointer;
+display: flex;             
+align-items: center;
+gap: 24px;                 
+list-style: none;          
+margin: 0;
+padding: 0;
+font-size: var(--font-size-sm);
+
+& .activo{
+    color: var(--color-primary);
+
+    &:hover{
+    color: var(--color-primary-hover);
+}
+
+}
+& li{
+    white-space: nowrap;
+
+    &:not(.deshabilitado):hover{
+    color: var(--color-secondary);
+    text-decoration: underline;
+    transition: color var(--transition-base), text-decoration var(--transition-base);}
+}
+
+& .deshabilitado{
+    color: var(--color-soft);
+    cursor: not-allowed;
+}
+
+}
+
+
+.header__iconos{
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* CARDS */
+
+.card{
+    background-color: var(--color-light);
+    width: auto;
+    height: auto;
+    align-content: center;
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 6px;
+    animation: Bounce var(--duration-slow) ease-in calc(var(--i, 0) * 80ms) backwards;  
+
+}
+
+
+.card-foto{
+    background-color: var(--color-light);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 15px);
+    height: auto;
+    align-content: center;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+    animation: fadeInUp var(--duration-slow) ease-in backwards; 
+
+    &:hover{
+        background-color: var(--color-secondary);
+        transform: translateY(-4px); 
+        transition: transform var(--transition-base), background-color var(--transition-base);
+    }
+}
+
+.card-foto__content{
+padding: var(--space-md) var(--space-lg);
+}
+ 

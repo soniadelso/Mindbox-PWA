@@ -1,0 +1,163 @@
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-light);
+    padding: var(--space-md) var(--space-xl);
+    width: 100%;
+}
+
+
+.footer{
+    background-color: var(--color-light);
+    padding: var(--space-md) var(--space-xl);
+    width: 100%;
+    box-sizing:border-box;
+    text-align: center;
+} 
+
+.main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+
+
+/* GRID */
+.grid-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+@media (width >= 800px) {
+    .grid-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/* FLEXBOX */
+
+.container{
+    display:flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xxl);
+
+
+    @media (width >= 550px) {
+    flex-flow: wrap;
+    }
+
+
+    @media (width >= 800px) {
+         flex-flow: wrap;
+    }
+}
+
+
+/* animaciones */
+
+@keyframes Bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+ 
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none;
+        transition: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--color-mid-dark);
+        color: var(--color-light);
+    }
+
+    .card,
+    .card-foto,
+    .formulario {
+        background-color: var(--color-dark);
+        color: var(--color-light);
+    }
+
+    header,
+    .footer {
+        background-color: var(--color-dark);
+        color: var(--color-light);
+    }
+
+    .navegacion .deshabilitado {
+        color: var(--color-mid-dark);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--color-mid-dark);
+        color: var(--color-light);
+    }
+
+    .card,
+    .card-foto,
+    .formulario {
+        background-color: var(--color-dark);
+        color: var(--color-light);
+    }
+
+    header,
+    .footer {
+        background-color: var(--color-dark);
+        color: var(--color-light);
+    }
+
+    .navegacion .deshabilitado {
+        color: var(--color-mid-dark);
+    }
+}
+
+
+
+

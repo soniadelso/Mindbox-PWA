@@ -1,0 +1,60 @@
+:root{
+   
+   /* Spacing */
+    --space-xs:0.25rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-xl: 3rem;
+
+    /* Line Height */
+
+    --line-height-md: 1.5;
+    --line-height-lg: 2;
+
+    /* Colores */
+
+    --color-main: rgb(8, 141, 236);
+    --color-secondary: rgb(120, 196, 250);
+    --color-light: white;
+    --color-soft: rgb(238, 238, 238);
+    --color-dark: rgb(56, 56, 56);
+    --color-mid-dark: rgb(132, 132, 132);
+
+    --color-primary: var(--color-main);
+    --color-primary-hover: var(--color-secondary);
+
+
+    /* Tipografia */
+    --font-heading: "Instrument Serif", serif;
+    --font-body: "Quicksand", sans-serif;
+
+    /* Fluid Fonts */
+    --font-size-xs:clamp(0.68rem, 0.6698rem + 0.0434vw, 0.7035rem);
+    --font-size-s:clamp(0.85rem, 0.812rem + 0.1623vw, 0.9377rem);
+    --font-size-base:clamp(1.0625rem, 0.9812rem + 0.3468vw, 1.25rem);
+    --font-size-m: clamp(1.3281rem, 1.1815rem + 0.6254vw, 1.6663rem);
+    --font-size-l:clamp(1.6602rem, 1.417rem + 1.0376vw, 2.2211rem);
+    --font-size-xl: clamp(2.0752rem, 1.6913rem + 1.638vw, 2.9607rem);
+    --font-size-xxl: clamp(2.594rem, 2.0076rem + 2.5021vw, 3.9467rem);
+
+
+    --page-max-with: 1240px;
+
+    /*Animations*/
+
+    --duration-fast: 150ms;
+    --duration-base: 300ms;
+    --duration-slow: 600ms;
+
+    --transition-fast: 150ms ease;
+    --transition-base: 300ms ease;
+    --transition-slow: 600ms ease;
+
+    /* Breaking Points */
+
+    --breakpoint-mobile: 375px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+}

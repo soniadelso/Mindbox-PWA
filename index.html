@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Nombre de la ventana-->
+    <title>MindBox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+
+
+<!--Esto enlaza el CSS con este archivo-->
+
+<link rel="stylesheet" href="./css/tokens.css">
+<link rel="stylesheet" href="./css/tipo.css">
+<link rel="stylesheet" href="./css/componentes.css">
+<link rel="stylesheet" href="./css/formularios.css">
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/styles.css">
+
+
+</head>
+
+
+<body>
+    <!--Encierra el contenido que va a llevar la web-->
+    <header>
+
+    <h1><a href="index.html">MindBox</a></h1>
+
+    <!--Lista-->
+    <nav>
+
+    <ul class= navegacion type="none">
+
+        <li class="activo">Inicio</li>
+        <li class="deshabilitado">Tareas</li>
+        <li class="deshabilitado">Notas</li>
+        <li><a href="inspiracion.html">Inspiración</a></li>
+        <li class="deshabilitado">Configuración</li>
+    </ul>
+
+    </nav>
+
+    <div class="header__iconos">
+        <ion-icon name="search-outline"></ion-icon>
+        <ion-icon name="notifications-outline"></ion-icon>
+        <ion-icon name="settings-outline"></ion-icon>
+        <ion-icon name="person-circle-outline"></ion-icon>
+    </div>
+
+    </header>
+
+
+ <main class="main">
+
+    <section>
+
+   
+    <h1>Dashboard</h1>
+
+
+    <!--Aquí comienza una sección con flexbox-->
+
+     
+    <section class="grid-content">
+
+
+    <div class="card" style="--i: 0">    
+
+    <h2><b>Tareas</b></h2>
+
+    <p>Organiza tus tareas diarias con facilidad.</p>
+
+    <button class="btn btn--primary" type="button">Ver Tareas</button>
+
+    </div> 
+
+    <div class="card" style="--i: 1"> 
+
+    <h2><b>Notas</b></h2>
+
+
+    <p>Toma notas rápidas y accede a ellas en cualquier momento.</p>
+
+    <button class="btn btn--primary" type="button">Ver Notas</button>
+
+    </div>
+
+
+    <div class="card" style="--i: 2">
+  
+    <h2><b>Inspiración</b></h2>
+
+    <p>Encuentra inspiración para tus proyectos y tareas</p>
+
+    <button class="btn btn--primary" type="button">Ver Inspiración</button>
+
+    </div>
+
+    <div class="card" style="--i: 3">
+
+    <h2><b>Configuración</b></h2>
+
+    <p>Personaliza la aplicación según tus preferencias.</p>
+
+    <button class="btn btn--primary" type="button">Ver Configuración</button>
+
+    </div>
+
+      </section>
+
+    </section>   
+
+    <h1>Últimas Inspiraciones</h1>
+
+
+ <section class="container"> 
+
+
+    <!--Imagen 1-->
+
+    <div class="card-foto">
+
+    <picture>
+        <source media="(max-width: 767px)" srcset="images/inspiracion-1-760px.jpg">
+        <img src="images/inspiracion-1.jpg" width="100%" height="auto" alt="imagen playa">
+    </picture>
+
+        <div class="card-foto__content">
+
+    <h2>Título de la Inspiración 1</h2>
+    
+    <p>Fecha: 01/01/2025</p>
+
+    <p>Resumen de la inspiración 1.</p>
+            
+         </div>
+
+    </div>
+
+
+    <!--Imagen 2-->
+
+    <div class="card-foto">
+
+    <picture>
+        <source media="(max-width: 767px)" srcset="images/inspiracion-2-760px.jpg">
+        <img src="images/inspiracion-2.jpg" width="100%" height="auto" alt="camino montaña">
+    </picture>
+
+        <div class="card-foto__content">
+
+    <h2>Título de la Inspiración 2</h2>
+    
+    <p>Fecha: 02/01/2025</p>
+
+    <p>Resumen de la inspiración 2.</p>
+
+        </div>
+
+    </div>
+
+     <!--Imagen 3-->
+
+     <div class="card-foto">
+
+     <picture>
+        <source media="(max-width: 767px)" srcset="images/inspiracion-3-760px.jpg">
+        <img src="images/inspiracion-3.jpg" width="100%" height="auto" alt="vía tren">
+     </picture>
+
+         <div class="card-foto__content">
+
+        <h2>Título de la Inspiración 3</h2>
+    
+        <p>Fecha: 02/01/2025</p>
+
+        <p>Resumen de la inspiración 3.</p>
+
+        </div>
+
+    </div>
+
+     <!--Imagen 4-->
+
+     <div class="card-foto">
+
+     <picture>
+        <source media="(max-width: 767px)" srcset="images/inspiracion-4-760px.jpg">
+        <img src="images/inspiracion-4.jpg" width="100%" height="auto" alt="montaña blanco y negro">
+     </picture>
+
+       <div class="card-foto__content"> 
+
+    <h2>Título de la Inspiración 4</h2>
+    
+    <p>Fecha: 03/01/2025</p>
+
+    <p>Resumen de la inspiración 4.</p>
+
+        </div> 
+
+    </div>
+
+    </section>
+
+    </main>
+
+<div class="footer">
+
+    <br>
+
+     <p> &copy; 2025 MindBox. Todos los derechos reservados.</p>
+
+     <br>
+
+</div>
+
+
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    
+</body>
+</html>
