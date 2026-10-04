@@ -34,6 +34,7 @@
     /* Fluid Fonts */
     --font-size-xs:clamp(0.68rem, 0.6698rem + 0.0434vw, 0.7035rem);
     --font-size-s:clamp(0.85rem, 0.812rem + 0.1623vw, 0.9377rem);
+    --font-size-card-attribution: calc(var(--font-size-s) - 4px);
     --font-size-base:clamp(1.0625rem, 0.9812rem + 0.3468vw, 1.25rem);
     --font-size-m: clamp(1.3281rem, 1.1815rem + 0.6254vw, 1.6663rem);
     --font-size-l:clamp(1.6602rem, 1.417rem + 1.0376vw, 2.2211rem);

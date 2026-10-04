@@ -123,6 +123,10 @@ a{
 .card-foto__content{
 padding: var(--space-md) var(--space-lg);
 }
+
+.card-foto .atribucion-foto {
+  font-size: var(--font-size-card-attribution);
+}
  
 
 /*SWIPER*/
