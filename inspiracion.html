@@ -69,18 +69,34 @@
 
     <div class="formulario">    
         <form action="" method="get" enctype="text/plain">
+            <div class="formulario__campo">
             <label for="TítuloInspo">Título</label>
-            <input type="text" name="TítuloInspo" placeholder="Escribe el título"/>
+            <input id="TítuloInspo" type="text" name="TítuloInspo" placeholder="Escribe el título"/>
+            </div>
 
+            <div class="formulario__campo">
+                <label for="desc">Comentario</label>
+                <textarea id="desc" name="desc" cols="60" rows="10" placeholder="Escribe el texto que te inspira..."></textarea>
+            </div>
 
-        <br>
-        <br>
+            <div class="formulario__campo">
+                <label for="busqueda-imagen">Busca una imagen en Unsplash</label>
+                <div class="busqueda-imagen">
+                    <input id="busqueda-imagen" name="busquedaImagen" type="search" placeholder="Por ejemplo: playa, montaña..." autocomplete="off">
+                    <button class="btn btn--primary" id="buscar-imagen" type="button">Buscar</button>
+                </div>
+                <p class="estado-busqueda" id="estado-busqueda" role="status" aria-live="polite"></p>
+                <div class="resultados-paginados">
+                    <div class="resultados-imagenes" id="resultados-imagenes" aria-label="Resultados de imágenes"></div>
+                    <nav class="paginacion-imagenes" id="paginacion-imagenes" aria-label="Paginación de resultados" hidden>
+                        <button class="btn btn--link" id="pagina-anterior" type="button">Anterior</button>
+                        <span id="numero-pagina" aria-live="polite"></span>
+                        <button class="btn btn--link" id="pagina-siguiente" type="button">Siguiente</button>
+                    </nav>
+                </div>
+            </div>
 
-    <label for="desc">Comentario</label>
-      <textarea name="desc" cols="60" rows="10" placeholder="Escribe el texto que te inspira..."></textarea>
-
-      <br>
-      <br>
+        <p class="mensaje-error">Faltan campos por rellenar</p>
 
     <button class="btn btn--primary" type="submit">Guardar</button>
 
@@ -95,7 +111,7 @@
     <h1>Últimas Inspiraciones</h1>
 
 
- <section class="container"> 
+ <section class="container" id="lista-inspiraciones"> 
 
 
     <!--Imagen 1-->
@@ -187,19 +203,10 @@
     </section>
 
 
-    <!--He utilizado la misma sección destacada para el Footer,
-    además he añadido <br> para dar márgen aunque la forma
-    adecuada es a través de padding y margins-->
-
     </main>
 
 <div class="footer">
-
-    <br>
-
      <p> &copy; 2025 MindBox. Todos los derechos reservados.</p>
-
-     <br>
 
 </div>
 
@@ -213,6 +220,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+        <script src="./formulario.js"></script>
     
 </body>
 </html>

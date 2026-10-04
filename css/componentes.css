@@ -110,9 +110,48 @@ a{
         transform: translateY(-4px); 
         transition: transform var(--transition-base), background-color var(--transition-base);
     }
+
+    & > img,
+    & > picture img {
+    display: block;
+    width: 100%;
+    height: var(--card-foto-image-height);
+    object-fit: cover;
+  }
 }
 
 .card-foto__content{
 padding: var(--space-md) var(--space-lg);
 }
  
+
+/*SWIPER*/
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev {
+  left: 12px;
+  color: var(--color-light);
+}
+
+.swiper-button-next {
+  right: 12px;
+  color: var(--color-light);
+}
+
+.swiper-scrollbar {
+  background-color: var(--color-light);
+}
+
+.swiper-scrollbar-drag {
+  background-color: var(--color-primary);
+}

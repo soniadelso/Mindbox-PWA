@@ -43,6 +43,9 @@
 
     --page-max-with: 1240px;
 
+    /* Card image dimensions */
+    --card-foto-image-height: 300px;
+
     /*Animations*/
 
     --duration-fast: 150ms;
@@ -58,4 +61,9 @@
     --breakpoint-mobile: 375px;
     --breakpoint-tablet: 768px;
     --breakpoint-desktop: 1024px;
+
+
+    /*Swiper width*/
+    --swiper-width: 600px;
+    --swiper-height: 400px;
 }
