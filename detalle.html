@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBox - Detalle</title>
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#088dec">
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+    <script>if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/tokens.css">
+    <link rel="stylesheet" href="./css/tipo.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/componentes.css">
+    <link rel="stylesheet" href="./css/formularios.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header id="cabecera" data-activo="inspiracion"></header>
+
+    <main class="main" id="app"></main>
+
+    <div class="footer" id="pie"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Vue 3 desde CDN: expone el objeto global Vue, sin necesidad de Vite ni instalación. -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="./js/componentes.js"></script>
+    <script src="./js/inspiraciones.js"></script>
+    <script>
+        // Monta el componente DetalleInspiracion (definido en inspiraciones.js) en <main id="app">.
+        Vue.createApp(DetalleInspiracion).mount('#app');
+    </script>
+</body>
+</html>

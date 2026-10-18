@@ -31,6 +31,7 @@
     font-family: var(--font-body);
     font-size: var(--font-size-s);
 }
+}
 
 .busqueda-imagen {
     display: flex;
@@ -149,7 +150,6 @@
     border-radius: 6px;
 }
 
-    & button[type="submit"] {
-        align-self: flex-start;
-    }
+.formulario button[type="submit"] {
+    align-self: flex-start;
 }

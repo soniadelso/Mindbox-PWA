@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "titulo": "Título de la Inspiración 1",
+    "fecha": "01/01/2025",
+    "descripcion": "Resumen de la inspiración 1.",
+    "detalle": "La playa invita a parar, respirar y dejar que la mente se despeje. Una imagen para recordar la calma del mar como punto de partida de nuevas ideas.",
+    "imagen": "images/inspiracion-1.jpg",
+    "imagenMovil": "images/inspiracion-1-760px.jpg",
+    "alt": "imagen playa"
+  },
+  {
+    "id": "2",
+    "titulo": "Título de la Inspiración 2",
+    "fecha": "02/01/2025",
+    "descripcion": "Resumen de la inspiración 2.",
+    "detalle": "Un camino de montaña como metáfora del progreso: paso a paso, sin prisa y con la vista puesta en el horizonte.",
+    "imagen": "images/inspiracion-2.jpg",
+    "imagenMovil": "images/inspiracion-2-760px.jpg",
+    "alt": "camino montaña"
+  },
+  {
+    "id": "3",
+    "titulo": "Título de la Inspiración 3",
+    "fecha": "02/01/2025",
+    "descripcion": "Resumen de la inspiración 3.",
+    "detalle": "Las vías del tren se pierden en la distancia y recuerdan que cada proyecto tiene un destino, aunque aún no se vea.",
+    "imagen": "images/inspiracion-3.jpg",
+    "imagenMovil": "images/inspiracion-3-760px.jpg",
+    "alt": "vía tren"
+  },
+  {
+    "id": "4",
+    "titulo": "Título de la Inspiración 4",
+    "fecha": "03/01/2025",
+    "descripcion": "Resumen de la inspiración 4.",
+    "detalle": "Una montaña en blanco y negro: menos ruido, más contraste y foco en lo esencial.",
+    "imagen": "images/inspiracion-4.jpg",
+    "imagenMovil": "images/inspiracion-4-760px.jpg",
+    "alt": "montaña blanco y negro"
+  }
+]

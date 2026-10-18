@@ -10,7 +10,6 @@ const paginacionImagenes = document.querySelector('#paginacion-imagenes');
 const botonPaginaAnterior = document.querySelector('#pagina-anterior');
 const botonPaginaSiguiente = document.querySelector('#pagina-siguiente');
 const numeroPagina = document.querySelector('#numero-pagina');
-const galeria = document.querySelector('#lista-inspiraciones');
 const claveInspiraciones = 'mindbox-inspiraciones';
 const UNSPLASH_ACCESS_KEY = 'OeGwlBoONd-FyBIxP9nmEzg9W80swx_5tUySMzoCylw';
 const inspiracionesGuardadas = JSON.parse(localStorage.getItem(claveInspiraciones) || '[]');
@@ -51,35 +50,6 @@ function agregarAtribucion(contenedor, fotografo, perfilFotografo) {
 
     atribucion.append('Foto de ', enlaceFotografo, ' en ', enlaceUnsplashSitio);
     contenedor.append(atribucion);
-}
-
-function crearTarjeta(inspiracion) {
-    const tarjeta = document.createElement('div');
-    tarjeta.className = 'card-foto';
-
-    const imagen = document.createElement('img');
-    imagen.src = inspiracion.archivo;
-    imagen.alt = inspiracion.nombre;
-    imagen.loading = 'lazy';
-
-    const contenido = document.createElement('div');
-    contenido.className = 'card-foto__content';
-
-    const tituloTarjeta = document.createElement('h2');
-    tituloTarjeta.textContent = inspiracion.titulo;
-
-    const fechaTarjeta = document.createElement('p');
-    fechaTarjeta.textContent = `Fecha: ${inspiracion.fecha}`;
-
-    const descripcionTarjeta = document.createElement('p');
-    descripcionTarjeta.textContent = inspiracion.descripcion;
-
-    contenido.append(tituloTarjeta, fechaTarjeta, descripcionTarjeta);
-    if (inspiracion.fotografo && inspiracion.perfilFotografo) {
-        agregarAtribucion(contenido, inspiracion.fotografo, inspiracion.perfilFotografo);
-    }
-    tarjeta.append(imagen, contenido);
-    return tarjeta;
 }
 
 function seleccionarFoto(foto) {
@@ -185,10 +155,6 @@ campoBusqueda.addEventListener('keydown', (evento) => {
 campoTitulo.addEventListener('input', () => campoTitulo.setAttribute('aria-invalid', 'false'));
 campoDescripcion.addEventListener('input', () => campoDescripcion.setAttribute('aria-invalid', 'false'));
 
-inspiracionesGuardadas.forEach((inspiracion) => {
-    galeria.prepend(crearTarjeta(inspiracion));
-});
-
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
 
@@ -209,6 +175,7 @@ formulario.addEventListener('submit', (evento) => {
 
     mensajeError.style.display = 'none';
     const inspiracion = {
+        id: `local-${Date.now()}`,
         titulo,
         descripcion,
         archivo: fotoSeleccionada.urls.regular,
@@ -220,7 +187,7 @@ formulario.addEventListener('submit', (evento) => {
 
     inspiracionesGuardadas.push(inspiracion);
     localStorage.setItem(claveInspiraciones, JSON.stringify(inspiracionesGuardadas));
-    galeria.prepend(crearTarjeta(inspiracion));
+    window.listaApp.recargar();
 
     formulario.reset();
     fotoSeleccionada = null;

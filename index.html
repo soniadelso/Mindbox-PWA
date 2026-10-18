@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Nombre de la ventana-->
     <title>MindBox</title>
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#088dec">
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+    <script>if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -30,32 +34,7 @@
 
 <body>
     <!--Encierra el contenido que va a llevar la web-->
-    <header>
-
-    <h1><a href="index.html">MindBox</a></h1>
-
-    <!--Lista-->
-    <nav>
-
-    <ul class= navegacion type="none">
-
-        <li class="activo">Inicio</li>
-        <li class="deshabilitado">Tareas</li>
-        <li class="deshabilitado">Notas</li>
-        <li><a href="inspiracion.html">Inspiración</a></li>
-        <li class="deshabilitado">Configuración</li>
-    </ul>
-
-    </nav>
-
-    <div class="header__iconos">
-        <ion-icon name="search-outline"></ion-icon>
-        <ion-icon name="notifications-outline"></ion-icon>
-        <ion-icon name="settings-outline"></ion-icon>
-        <ion-icon name="person-circle-outline"></ion-icon>
-    </div>
-
-    </header>
+    <header id="cabecera" data-activo="inicio"></header>
 
 
  <main class="main">
@@ -171,107 +150,11 @@
     <h1>Últimas Inspiraciones</h1>
 
 
- <section class="container"> 
-
-
-    <!--Imagen 1-->
-
-    <div class="card-foto">
-
-    <picture>
-        <source media="(max-width: 767px)" srcset="images/inspiracion-1-760px.jpg">
-        <img src="images/inspiracion-1.jpg" alt="imagen playa">
-    </picture>
-
-        <div class="card-foto__content">
-
-    <h2>Título de la Inspiración 1</h2>
-    
-    <p>Fecha: 01/01/2025</p>
-
-    <p>Resumen de la inspiración 1.</p>
-            
-         </div>
-
-    </div>
-
-
-    <!--Imagen 2-->
-
-    <div class="card-foto">
-
-    <picture>
-        <source media="(max-width: 767px)" srcset="images/inspiracion-2-760px.jpg">
-        <img src="images/inspiracion-2.jpg" alt="camino montaña">
-    </picture>
-
-        <div class="card-foto__content">
-
-    <h2>Título de la Inspiración 2</h2>
-    
-    <p>Fecha: 02/01/2025</p>
-
-    <p>Resumen de la inspiración 2.</p>
-
-        </div>
-
-    </div>
-
-     <!--Imagen 3-->
-
-     <div class="card-foto">
-
-     <picture>
-        <source media="(max-width: 767px)" srcset="images/inspiracion-3-760px.jpg">
-        <img src="images/inspiracion-3.jpg" alt="vía tren" loading="lazy">
-     </picture>
-
-         <div class="card-foto__content">
-
-        <h2>Título de la Inspiración 3</h2>
-    
-        <p>Fecha: 02/01/2025</p>
-
-        <p>Resumen de la inspiración 3.</p>
-
-        </div>
-
-    </div>
-
-     <!--Imagen 4-->
-
-     <div class="card-foto">
-
-     <picture>
-        <source media="(max-width: 767px)" srcset="images/inspiracion-4-760px.jpg">
-        <img src="images/inspiracion-4.jpg" alt="montaña blanco y negro" loading="lazy">
-     </picture>
-
-       <div class="card-foto__content"> 
-
-    <h2>Título de la Inspiración 4</h2>
-    
-    <p>Fecha: 03/01/2025</p>
-
-    <p>Resumen de la inspiración 4.</p>
-
-        </div> 
-
-    </div>
-
-    </section>
+ <section class="container" id="lista-inspiraciones"></section>
 
     </main>
 
-<div class="footer">
-
-    <br>
-
-     <p> &copy; 2025 MindBox. Todos los derechos reservados.</p>
-
-     <br>
-
-</div>
+<div class="footer" id="pie"></div>
 
 
 
@@ -285,7 +168,15 @@
     ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="./swiper.js"></script>
+    <script src="./js/swiper.js"></script>
     
+    <!-- Vue 3 desde CDN: expone el objeto global Vue. -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="./js/componentes.js"></script>
+    <script src="./js/inspiraciones.js"></script>
+    <script>
+        // Monta la lista en #lista-inspiraciones (Vue sustituye su contenido) y guarda la app para poder llamar a recargar().
+        window.listaApp = Vue.createApp(ListaInspiraciones).mount('#lista-inspiraciones');
+    </script>
 </body>
 </html>
